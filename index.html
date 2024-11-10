@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Primer Contacto</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; }
+        h1 { text-align: center; color: #333; }
+        .response, .feedback { margin-top: 20px; }
+        button { padding: 10px 20px; margin: 10px; background-color: #0073e6; color: white; border: none; border-radius: 5px; }
+        .cta { margin-top: 30px; text-align: center; }
+        .cta a { display: inline-block; padding: 12px 24px; background-color: #28a745; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<h1>Simulador de Primer Contacto</h1>
+<p>Elige una respuesta inicial para conectar con el cliente:</p>
+
+<div class="response">
+    <button onclick="respuestaCliente('indeciso')">"Hola [Nombre], ¿qué resultado esperas lograr?"</button>
+    <button onclick="respuestaCliente('interesado')">"¡Me alegra saber que te interesa! ¿Qué aspecto quieres explorar?"</button>
+    <button onclick="respuestaCliente('desconfiado')">"Entiendo tus dudas. ¿Te gustaría ver casos de éxito?"</button>
+    <button onclick="respuestaCliente('expectativa')">"He revisado tus necesidades y creo que tenemos algo interesante para ti."</button>
+    <button onclick="respuestaCliente('empatia')">"Sé que puede ser abrumador buscar la opción ideal. Estoy aquí para ayudarte."</button>
+    <button onclick="respuestaCliente('asistencia')">"Puedo ayudarte a resolver cada duda y ver cómo nuestro producto te beneficia."</button>
+</div>
+
+<div id="feedback" class="feedback"></div>
+
+<div class="cta">
+    <a href="https://klicana.work/YZmsH3" target="_blank">Únete a Lucrachat IA</a>
+</div>
+
+<script>
+function respuestaCliente(tipo) {
+    let feedback = "";
+    if (tipo === 'indeciso') {
+        feedback = "Buena elección. Esto abre la puerta para que el cliente hable sobre sus metas.";
+    } else if (tipo === 'interesado') {
+        feedback = "Excelente. Estás profundizando en el interés del cliente, ideal para avanzar.";
+    } else if (tipo === 'desconfiado') {
+        feedback = "Buena respuesta. Ofreces seguridad mostrando transparencia.";
+    } else if (tipo === 'expectativa') {
+        feedback = "Muy bien. Generar expectativa capta la curiosidad del cliente.";
+    } else if (tipo === 'empatia') {
+        feedback = "Perfecto. Mostrar empatía ayuda a construir confianza rápidamente.";
+    } else if (tipo === 'asistencia') {
+        feedback = "Excelente. Ofrecer asistencia personalizada demuestra dedicación y compromiso.";
+    }
+    document.getElementById('feedback').innerHTML = feedback;
+}
+</script>
+
+</body>
+</html>
